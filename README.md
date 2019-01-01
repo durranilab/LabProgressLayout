@@ -1,6 +1,8 @@
 # LabProgressLayout
 ###### Quite simple effective Progress Bar Layout
 
+[ ![Download](https://api.bintray.com/packages/durranilab/maven/com.durranilab.labprogresslayout/images/download.svg) ](https://bintray.com/durranilab/maven/com.durranilab.labprogresslayout/_latestVersion)
+
 Simple,Colorful and Rounded(optional) Progress Bar Layout for Android.
 
 Min API 16
