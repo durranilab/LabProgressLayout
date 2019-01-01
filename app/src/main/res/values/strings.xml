@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LabProgressLayout</string>
+    <string name="downloading">Downloading...</string>
+    <string name="touch_to_start">Touch to start</string>
 </resources>

@@ -5,5 +5,6 @@
         <attr name="loadedColor" format="color" />
         <attr name="maxProgress" format="integer" />
         <attr name="autoProgress" format="boolean"/>
+        <attr name="cornerRadius" format="integer"/>
     </declare-styleable>
 </resources>

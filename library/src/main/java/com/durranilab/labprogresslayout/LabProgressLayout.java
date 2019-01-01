@@ -9,6 +9,7 @@ import android.graphics.drawable.Animatable;
 import android.os.Build;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class LabProgressLayout extends View implements Animatable {
@@ -27,6 +28,8 @@ public class LabProgressLayout extends View implements Animatable {
     private int mWidth;
     private int maxProgress;
     private int currentProgress = 0;
+
+    private int cornerRadius;
 
     private Handler handlerProgress;
 
@@ -77,9 +80,13 @@ public class LabProgressLayout extends View implements Animatable {
 
     @Override protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawRect(0, 0, mWidth, mHeight, paintProgressEmpty);
+      //  canvas.drawRect(0, 0, mWidth, mHeight, paintProgressEmpty);
+        canvas.drawRoundRect(0,0,mWidth,mHeight,cornerRadius,cornerRadius,paintProgressEmpty);
       //  canvas.drawRect(0,mHeight,mWidth,0,paintProgressEmpty);
-        canvas.drawRect(0, 0, calculatePositionIndex(currentProgress), mHeight, paintProgressLoaded);
+
+
+     //   canvas.drawRect(0, 0, calculatePositionIndex(currentProgress), mHeight, paintProgressLoaded);
+       canvas.drawRoundRect(0,0,calculatePositionIndex(currentProgress),mHeight,cornerRadius,cornerRadius,paintProgressLoaded);
        // canvas.drawRect(0,calculatePositionIndex(currentProgress),mWidth,0,paintProgressLoaded);
     }
 
@@ -91,12 +98,14 @@ public class LabProgressLayout extends View implements Animatable {
         maxProgress = maxProgress * 10;
         int loadedColor = a.getColor(R.styleable.progressLayout_loadedColor, COLOR_LOADED_DEFAULT);
         int emptyColor = a.getColor(R.styleable.progressLayout_emptyColor, COLOR_EMPTY_DEFAULT);
+        cornerRadius  = a.getInt(R.styleable.progressLayout_cornerRadius,0);
         a.recycle();
 
         paintProgressEmpty = new Paint();
         paintProgressEmpty.setColor(emptyColor);
         paintProgressEmpty.setStyle(Paint.Style.FILL);
         paintProgressEmpty.setAntiAlias(true);
+
 
         paintProgressLoaded = new Paint();
         paintProgressLoaded.setColor(loadedColor);
@@ -142,9 +151,10 @@ public class LabProgressLayout extends View implements Animatable {
     private final Runnable mRunnableProgress = new Runnable() {
         @Override public void run() {
             if (isPlaying) {
-                if (currentProgress == maxProgress) {
+                if (currentProgress <= maxProgress) {
                     if (progressLayoutListener != null) {
                         progressLayoutListener.onProgressCompleted();
+                        Log.d("Progress","Completed");
                     }
                     currentProgress = 0;
                     setCurrentProgress(currentProgress);
