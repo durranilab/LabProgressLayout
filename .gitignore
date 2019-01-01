@@ -9,3 +9,7 @@
 /build
 /captures
 .externalNativeBuild
+/app/src/androidTest
+/app/src/test
+/LabProgress/src/androidTest
+/LabProgress/src/test
