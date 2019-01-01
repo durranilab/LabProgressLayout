@@ -6,12 +6,12 @@ Simple,Colorful and Rounded(optional) Progress Bar Layout for Android.
 Min API 16
 
 ### Usage
-####in your build.gradle (Module)
+#### in your build.gradle (Module)
 ```
 implementation 'com.durranilab:LabProgress:1.0'
 ```
 
-####in your .xml
+#### in your .xml
 ```
  <com.durranilab.labprogresslayout.LabProgressLayout
                 android:id="@+id/labProgressLayout"
@@ -26,7 +26,7 @@ implementation 'com.durranilab:LabProgress:1.0'
 ```
 Change emptyColor and loadedColor as needed.
 
-####in your activity
+#### in your activity
 
 ```
 //Declare
@@ -64,7 +64,7 @@ labProgressLayout.setProgressLayoutListener(new LabProgressLayoutListener() {
 
 for support please email contact@durranilab.com
 
-###### Thank You
+#### Thank You
 
 #### License
 ```
