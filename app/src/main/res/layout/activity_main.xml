@@ -33,11 +33,11 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_margin="10dp"
-                app:autoProgress="true"
-                app:cornerRadius="10"
-                app:emptyColor="#e8f5e9"
-                app:loadedColor="#81c784"
-                app:maxProgress="100" />
+                app:labAutoProgress="true"
+                app:labCornerRadius="10"
+                app:labEmptyColor="#e8f5e9"
+                app:labLoadedColor="#81c784"
+                app:labMaxProgress="100" />
 
 
         </RelativeLayout>
