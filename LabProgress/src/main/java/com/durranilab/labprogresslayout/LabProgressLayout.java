@@ -19,8 +19,8 @@ public class LabProgressLayout extends View implements Animatable {
     private static final int COLOR_LOADED_DEFAULT = 0x11FFFFFF;
     private static final int PROGRESS_SECOND_MS = 1000;
 
-    private static Paint paintProgressLoaded;
-    private static Paint paintProgressEmpty;
+    private Paint paintProgressLoaded;
+    private Paint paintProgressEmpty;
 
     private boolean isPlaying = false;
     private boolean isAutoProgress;
