@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.drawable.Animatable;
 import android.os.Build;
 import android.os.Handler;
+import android.support.annotation.ColorRes;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -142,6 +143,14 @@ public class LabProgressLayout extends View implements Animatable {
 
     public void setAutoProgress(boolean isAutoProgress) {
         this.isAutoProgress = isAutoProgress;
+    }
+
+    public void setProgressColor(int color) {
+        paintProgressLoaded.setColor(color);
+    }
+
+    public void setProgressEmptyColor(int color) {
+        paintProgressEmpty.setColor(color);
     }
 
     public void setProgressLayoutListener(LabProgressLayoutListener progressLayoutListener) {
