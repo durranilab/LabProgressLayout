@@ -99,7 +99,7 @@ public class LabProgressLayout extends View implements Animatable {
         maxProgress = maxProgress * 10;
         int loadedColor = a.getColor(R.styleable.LabProgressLayout_labLoadedColor, COLOR_LOADED_DEFAULT);
         int emptyColor = a.getColor(R.styleable.LabProgressLayout_labEmptyColor, COLOR_EMPTY_DEFAULT);
-        cornerRadius  = a.getInt(R.styleable.LabProgressLayout_labCornerRadius,0);
+        cornerRadius  = a.getDimensionPixelSize(R.styleable.LabProgressLayout_labCornerRadius,0);
         a.recycle();
 
         paintProgressEmpty = new Paint();

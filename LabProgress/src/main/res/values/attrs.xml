@@ -5,6 +5,6 @@
         <attr name="labLoadedColor" format="color" />
         <attr name="labMaxProgress" format="integer" />
         <attr name="labAutoProgress" format="boolean"/>
-        <attr name="labCornerRadius" format="integer"/>
+        <attr name="labCornerRadius" format="dimension"/>
     </declare-styleable>
 </resources>

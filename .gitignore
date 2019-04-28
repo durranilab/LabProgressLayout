@@ -9,3 +9,9 @@
 /build
 /captures
 .externalNativeBuild
+*.ser
+.idea/checkstyle-idea.xml
+.idea/codeStyles/Project.xml
+.idea/encodings.xml
+.idea/codeStyles/Project.xml
+.idea/misc.xml
