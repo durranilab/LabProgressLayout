@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.drawable.Animatable;
 import android.os.Build;
 import android.os.Handler;
+import android.support.annotation.ColorRes;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -18,8 +19,8 @@ public class LabProgressLayout extends View implements Animatable {
     private static final int COLOR_LOADED_DEFAULT = 0x11FFFFFF;
     private static final int PROGRESS_SECOND_MS = 1000;
 
-    private static Paint paintProgressLoaded;
-    private static Paint paintProgressEmpty;
+    private Paint paintProgressLoaded;
+    private Paint paintProgressEmpty;
 
     private boolean isPlaying = false;
     private boolean isAutoProgress;
@@ -92,13 +93,13 @@ public class LabProgressLayout extends View implements Animatable {
 
     private void init(Context context, AttributeSet attrs) {
         setWillNotDraw(false);
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.progressLayout);
-        isAutoProgress = a.getBoolean(R.styleable.progressLayout_autoProgress, true);
-        maxProgress = a.getInt(R.styleable.progressLayout_maxProgress, 0);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.LabProgressLayout);
+        isAutoProgress = a.getBoolean(R.styleable.LabProgressLayout_labAutoProgress, true);
+        maxProgress = a.getInt(R.styleable.LabProgressLayout_labMaxProgress, 0);
         maxProgress = maxProgress * 10;
-        int loadedColor = a.getColor(R.styleable.progressLayout_loadedColor, COLOR_LOADED_DEFAULT);
-        int emptyColor = a.getColor(R.styleable.progressLayout_emptyColor, COLOR_EMPTY_DEFAULT);
-        cornerRadius  = a.getInt(R.styleable.progressLayout_cornerRadius,0);
+        int loadedColor = a.getColor(R.styleable.LabProgressLayout_labLoadedColor, COLOR_LOADED_DEFAULT);
+        int emptyColor = a.getColor(R.styleable.LabProgressLayout_labEmptyColor, COLOR_EMPTY_DEFAULT);
+        cornerRadius  = a.getDimensionPixelSize(R.styleable.LabProgressLayout_labCornerRadius,0);
         a.recycle();
 
         paintProgressEmpty = new Paint();
@@ -142,6 +143,14 @@ public class LabProgressLayout extends View implements Animatable {
 
     public void setAutoProgress(boolean isAutoProgress) {
         this.isAutoProgress = isAutoProgress;
+    }
+
+    public void setProgressColor(int color) {
+        paintProgressLoaded.setColor(color);
+    }
+
+    public void setProgressEmptyColor(int color) {
+        paintProgressEmpty.setColor(color);
     }
 
     public void setProgressLayoutListener(LabProgressLayoutListener progressLayoutListener) {
