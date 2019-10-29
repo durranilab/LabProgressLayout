@@ -1,9 +1,7 @@
 # LabProgressLayout
 ###### Quite simple effective Progress Bar Layout
 
-[ ![Download](https://api.bintray.com/packages/durranilab/maven/com.durranilab.labprogresslayout/images/download.svg) ](https://bintray.com/durranilab/maven/com.durranilab.labprogresslayout/_latestVersion)
-
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Lab%20Progress%20Layout-brightgreen.svg?style=flat-square)](https://android-arsenal.com/details/1/7432)
+[ ![Download](https://api.bintray.com/packages/durranilab/maven/com.durranilab.labprogresslayout/images/download.svg) ](https://bintray.com/durranilab/maven/com.durranilab.labprogresslayout/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Lab%20Progress%20Layout-brightgreen.svg?style=flat-square)](https://android-arsenal.com/details/1/7432)
 
 ![alt text](https://raw.githubusercontent.com/durranilab/LabProgressLayout/master/lab_layout.jpg)
 
